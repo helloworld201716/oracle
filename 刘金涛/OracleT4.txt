@@ -1,0 +1,277 @@
+SQL> select abs(-1) from dual;
+
+   ABS(-1)                                                                      
+----------                                                                      
+         1                                                                      
+
+SQL> select ceil(425.1) from dual;
+
+CEIL(425.1)                                                                     
+-----------                                                                     
+        426                                                                     
+
+SQL> select cos(90) from dual;
+
+   COS(90)                                                                      
+----------                                                                      
+-.44807362                                                                      
+
+SQL> select floor(22.9) from dual;
+
+FLOOR(22.9)                                                                     
+-----------                                                                     
+         22                                                                     
+
+SQL> select power(2,3) from dual;
+
+POWER(2,3)                                                                      
+----------                                                                      
+         8                                                                      
+
+SQL> select mod(8,3) from dual;
+
+  MOD(8,3)                                                                      
+----------                                                                      
+         2                                                                      
+
+SQL> select round(45.795) from dual;
+
+ROUND(45.795)                                                                   
+-------------                                                                   
+           46                                                                   
+
+SQL> select round(45.795,1) from dual;
+
+ROUND(45.795,1)                                                                 
+---------------                                                                 
+           45.8                                                                 
+
+SQL> select trunc(52.8612,3) from dual;
+
+TRUNC(52.8612,3)                                                                
+----------------                                                                
+          52.861                                                                
+
+SQL> select sprt(16) from dual;
+select sprt(16) from dual
+       *
+第 1 行出现错误: 
+ORA-00904: "SPRT": 标识符无效 
+
+
+SQL> select sqrt(16) from dual;
+
+  SQRT(16)                                                                      
+----------                                                                      
+         4                                                                      
+
+SQL> select sign(-16) from dual;
+
+ SIGN(-16)                                                                      
+----------                                                                      
+        -1                                                                      
+
+SQL> select sign(16) from dual;
+
+  SIGN(16)                                                                      
+----------                                                                      
+         1                                                                      
+
+SQL> select initcap('hello') from dual;
+
+INITCAP('H                                                                      
+----------                                                                      
+Hello                                                                           
+
+SQL> select lower('SDF') from duall
+  2  ;
+select lower('SDF') from duall
+                         *
+第 1 行出现错误: 
+ORA-00942: 表或视图不存在 
+
+
+SQL> select lower('SDF') from dual;
+
+LOWER(                                                                          
+------                                                                          
+sdf                                                                             
+
+SQL> select upper('sfasdf') from dual;
+
+UPPER('SFASD                                                                    
+------------                                                                    
+SFASDF                                                                          
+
+SQL> select length('asdf') from dual;
+
+LENGTH('ASDF')                                                                  
+--------------                                                                  
+             4                                                                  
+
+SQL> select ltrim('fasfsad','a') from dual;
+
+LTRIM('FASFSAD                                                                  
+--------------                                                                  
+fasfsad                                                                         
+
+SQL> select ltrim('fasfsad','fa') from dual;
+
+LTRIM('FAS                                                                      
+----------                                                                      
+sfsad                                                                           
+
+SQL> select rtrim('sdfsfede','d') from dual;
+
+RTRIM('SDFSFEDE'                                                                
+----------------                                                                
+sdfsfede                                                                        
+
+SQL> select rtrim('sdfsfede','de') from dual;
+
+RTRIM('SDF                                                                      
+----------                                                                      
+sdfsf                                                                           
+
+SQL> select translate('jack','j','bl') from dual;
+
+TRANSLAT                                                                        
+--------                                                                        
+back                                                                            
+
+SQL> select translate('jack','j',r'') from dual;
+select translate('jack','j',r'') from dual
+                             *
+第 1 行出现错误: 
+ORA-00907: 缺失右括号 
+
+
+SQL> select translate('jack','j','r') from dual;
+
+TRANSLAT                                                                        
+--------                                                                        
+rack                                                                            
+
+SQL> select replace('jack','j','bl') from dual;
+
+REPLACE('J                                                                      
+----------                                                                      
+black                                                                           
+
+SQL> select replace('jack and jue','j','bl') from dual;
+
+REPLACE('JACKANDJUE','J','BL                                                    
+----------------------------                                                    
+black and blue                                                                  
+
+SQL> select instr('hello world','w') from dual;
+
+INSTR('HELLOWORLD','W')                                                         
+-----------------------                                                         
+                      7                                                         
+
+SQL> select instr('hello world',' ') from dual;
+
+INSTR('HELLOWORLD','')                                                          
+----------------------                                                          
+                     6                                                          
+
+SQL> select substr('afsdeqwdsvs',4,4) from dual;
+
+SUBSTR('                                                                        
+--------                                                                        
+deqw                                                                            
+
+SQL> select concat('My','name','is','jack') from dual;
+select concat('My','name','is','jack') from dual
+       *
+第 1 行出现错误: 
+ORA-00909: 参数个数无效 
+
+
+SQL> select concat('My','name') from dual;
+
+CONCAT('MY',                                                                    
+------------                                                                    
+Myname                                                                          
+
+SQL> select concat('My',' name') from dual;
+
+CONCAT('MY','N                                                                  
+--------------                                                                  
+My name                                                                         
+
+SQL> select length('sdafaw') from dual;
+
+LENGTH('SDAFAW')                                                                
+----------------                                                                
+               6                                                                
+
+SQL> select sysdate from dual;
+
+SYSDATE                                                                         
+--------------                                                                  
+19-3月 -18                                                                      
+
+SQL> select to_char(sysdate,'yyyy-mm-dd/hh24:mi:ss') from dual;
+
+TO_CHAR(SYSDATE,'YYYY-MM-DD/HH24:MI:SS                                          
+--------------------------------------                                          
+2018-03-19/11:36:51                                                             
+
+SQL> select months_between(to_date('2018-01-19','yyyy-mm-dd'),sysdate) from dual;
+
+MONTHS_BETWEEN(TO_DATE('2018-01-19','YYYY-MM-DD'),SYSDATE)                      
+----------------------------------------------------------                      
+                                                        -2                      
+
+SQL> select months_between(sysdate,to_date('2018-01-19','yyyy-mm-dd')) from dual;
+
+MONTHS_BETWEEN(SYSDATE,TO_DATE('2018-01-19','YYYY-MM-DD'))                      
+----------------------------------------------------------                      
+                                                         2                      
+
+SQL> select add_months(sysdate,2) from dual;
+
+ADD_MONTHS(SYS                                                                  
+--------------                                                                  
+19-5月 -18                                                                      
+
+SQL> select add_months(sysdate,-2) from dual;
+
+ADD_MONTHS(SYS                                                                  
+--------------                                                                  
+19-1月 -18                                                                      
+
+SQL> select next_day(sysdate,3) from dual;
+
+NEXT_DAY(SYSDA                                                                  
+--------------                                                                  
+20-3月 -18                                                                      
+
+SQL> select next_day(sysdate,6) from dual;
+
+NEXT_DAY(SYSDA                                                                  
+--------------                                                                  
+23-3月 -18                                                                      
+
+SQL> select last_day(sysdate) from dual;
+
+LAST_DAY(SYSDA                                                                  
+--------------                                                                  
+31-3月 -18                                                                      
+
+SQL> select to_nomber('$153,654,986.4','$999,999,999.9') from dual;
+select to_nomber('$153,654,986.4','$999,999,999.9') from dual
+       *
+第 1 行出现错误: 
+ORA-00904: "TO_NOMBER": 标识符无效 
+
+
+SQL> select to_number('$153,654,986.4','$999,999,999.9') from dual;
+
+TO_NUMBER('$153,654,986.4','$999,999,999.9')                                    
+--------------------------------------------                                    
+                                   153654986                                    
+
+SQL> spool off
