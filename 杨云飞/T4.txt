@@ -1,0 +1,621 @@
+SQL> select abs(5) from dual;
+
+    ABS(5)                                                                      
+----------                                                                      
+         5                                                                      
+
+SQL> select ceil(5.3) from dual;
+
+ CEIL(5.3)                                                                      
+----------                                                                      
+         6                                                                      
+
+SQL> select floor(7.5654) from dual;
+
+FLOOR(7.5654)                                                                   
+-------------                                                                   
+            7                                                                   
+
+SQL> select cos(54) from dual;
+
+   COS(54)                                                                      
+----------                                                                      
+-.82930983                                                                      
+
+SQL> select sin(54) from dual;
+
+   SIN(54)                                                                      
+----------                                                                      
+-.55878905                                                                      
+
+SQL> select power(6,1/6) from dual;
+
+POWER(6,1/6)                                                                    
+------------                                                                    
+  1.34800615                                                                    
+
+SQL> select mod(6,2) from dual;
+
+  MOD(6,2)                                                                      
+----------                                                                      
+         0                                                                      
+
+SQL> select round(6.5465,2) from dual;
+
+ROUND(6.5465,2)                                                                 
+---------------                                                                 
+           6.55                                                                 
+
+SQL> select trunc(6.5465,2) from dual;
+
+TRUNC(6.5465,2)                                                                 
+---------------                                                                 
+           6.54                                                                 
+
+SQL> select sqrt(2) from dual;
+
+   SQRT(2)                                                                      
+----------                                                                      
+1.41421356                                                                      
+
+SQL> select sign(2) from dual;
+
+   SIGN(2)                                                                      
+----------                                                                      
+         1                                                                      
+
+SQL> select concat('hell','hi') from dual;
+
+CONCAT('HELL                                                                    
+------------                                                                    
+hellhi                                                                          
+
+SQL> select substr('hellasdasd','ei',4) from dual;
+select substr('hellasdasd','ei',4) from dual
+                           *
+第 1 行出现错误: 
+ORA-01722: 无效数字 
+
+
+SQL> select substr('hellasdasd','i',4) from dual;
+select substr('hellasdasd','i',4) from dual
+                           *
+第 1 行出现错误: 
+ORA-01722: 无效数字 
+
+
+SQL> select substr('hellasdasd','i',w) from dual;
+select substr('hellasdasd','i',w) from dual
+                               *
+第 1 行出现错误: 
+ORA-00904: "W": 标识符无效 
+
+
+SQL> select substr('hellasdasd','i','w') from dual;
+select substr('hellasdasd','i','w') from dual
+                           *
+第 1 行出现错误: 
+ORA-01722: 无效数字 
+
+
+SQL> select substr('hellasdasd','i','d') from dual;
+select substr('hellasdasd','i','d') from dual
+                           *
+第 1 行出现错误: 
+ORA-01722: 无效数字 
+
+
+SQL> select substr('hellasdasd','e','d') from dual;
+select substr('hellasdasd','e','d') from dual
+                           *
+第 1 行出现错误: 
+ORA-01722: 无效数字 
+
+
+SQL> select substr('hellasdasd','e','d') from dual;
+select substr('hellasdasd','e','d') from dual
+                           *
+第 1 行出现错误: 
+ORA-01722: 无效数字 
+
+
+SQL> select substr('hellasdasd',2,'d') from dual;
+select substr('hellasdasd',2,'d') from dual
+                             *
+第 1 行出现错误: 
+ORA-01722: 无效数字 
+
+
+SQL> select substr('hellasdasd',2,5) from dual;
+
+SUBSTR('HE                                                                      
+----------                                                                      
+ellas                                                                           
+
+SQL> select substr('hellasdasd') from dual;
+select substr('hellasdasd') from dual
+       *
+第 1 行出现错误: 
+ORA-00938: 函数没有足够的参数 
+
+
+SQL> select ltrim('hellasdasd') from dual;
+
+LTRIM('HELLASDASD')                                                             
+--------------------                                                            
+hellasdasd                                                                      
+
+SQL> select rtrim('hellasdasd') from dual;
+
+RTRIM('HELLASDASD')                                                             
+--------------------                                                            
+hellasdasd                                                                      
+
+SQL> select uppoer('hellasdasd') from dual;
+select uppoer('hellasdasd') from dual
+       *
+第 1 行出现错误: 
+ORA-00904: "UPPOER": 标识符无效 
+
+
+SQL> select upper('hellasdasd') from dual;
+
+UPPER('HELLASDASD')                                                             
+--------------------                                                            
+HELLASDASD                                                                      
+
+SQL> select lower('hellasdasd') from dual;
+
+LOWER('HELLASDASD')                                                             
+--------------------                                                            
+hellasdasd                                                                      
+
+SQL> select initcap('hellasdasd') from dual;
+
+INITCAP('HELLASDASD'                                                            
+--------------------                                                            
+Hellasdasd                                                                      
+
+SQL> select translate('hellasdasd','t','W') from dual;
+
+TRANSLATE('HELLASDAS                                                            
+--------------------                                                            
+hellasdasd                                                                      
+
+SQL> select translate('hellasdasd','h','W') from dual;
+
+TRANSLATE('HELLASDAS                                                            
+--------------------                                                            
+Wellasdasd                                                                      
+
+SQL> select instr('hellasdasd','a') from dual;
+
+INSTR('HELLASDASD','A')                                                         
+-----------------------                                                         
+                      5                                                         
+
+SQL> select replace('hellasdasd','a','he') from dual;
+
+REPLACE('HELLASDASD','A'                                                        
+------------------------                                                        
+hellhesdhesd                                                                    
+
+SQL> select sysdate from dual;
+
+SYSDATE                                                                         
+--------------                                                                  
+17-3月 -18                                                                      
+
+SQL> select months_between(to_date('2016-5-7','yyyy-mm-dd'),to_date('2017-3-7','yyyy-mm-dd'));
+select months_between(to_date('2016-5-7','yyyy-mm-dd'),to_date('2017-3-7','yyyy-mm-dd'))
+                                                                                       *
+第 1 行出现错误: 
+ORA-00923: 未找到要求的 FROM 关键字 
+
+
+SQL> select months_between(to_date('2016-5-7','yyyy-mm-dd'),to_date('2017-3-7','yyyy-mm-dd')) from dual;
+
+MONTHS_BETWEEN(TO_DATE('2016-5-7','YYYY-MM-DD'),TO_DATE('2017-3-7','YYYY-MM-DD')
+--------------------------------------------------------------------------------
+                                                                             -10
+
+SQL> select add_months(to_date('2016-5-7','yyyy-mm-dd'),10) from dual;
+
+ADD_MONTHS(TO_                                                                  
+--------------                                                                  
+07-3月 -17                                                                      
+
+SQL> select next_day(to_date('2016-5-7','yyyy-mm-dd'),6) from dual;
+
+NEXT_DAY(TO_DA                                                                  
+--------------                                                                  
+13-5月 -16                                                                      
+
+SQL> select last_day(to_date('2016-5-7','yyyy-mm-dd') from dual;
+select last_day(to_date('2016-5-7','yyyy-mm-dd') from dual
+                                                 *
+第 1 行出现错误: 
+ORA-00907: 缺失右括号 
+
+
+SQL> select last_day(to_date('2016-5-7','yyyy-mm-dd')) from dual;
+
+LAST_DAY(TO_DA                                                                  
+--------------                                                                  
+31-5月 -16                                                                      
+
+SQL> select to_number('$7894.54','$9999.99')) from dual;
+select to_number('$7894.54','$9999.99')) from dual
+                                       *
+第 1 行出现错误: 
+ORA-00923: 未找到要求的 FROM 关键字 
+
+
+SQL> select to_number('$7894.54','$9999.99') from dual;
+
+TO_NUMBER('$7894.54','$9999.99')                                                
+--------------------------------                                                
+                         7894.54                                                
+
+SQL> select to_number('￥7894.54','L9999.99') from dual;
+
+TO_NUMBER('￥7894.54','L9999.99')                                               
+---------------------------------                                               
+                          7894.54                                               
+
+SQL> select * from dept;
+
+       DID DNAME                                       MANAGER                  
+---------- ---------------------------------------- ----------                  
+TEL                                                              MASTER         
+------------------------------------------------------------ ----------         
+    MASUMN                                                                      
+----------                                                                      
+         1 董事会                                            5                  
+1111111                                                               0         
+                                                                                
+                                                                                
+         2 市场部                                            6                  
+222222                                                                1         
+                                                                                
+
+       DID DNAME                                       MANAGER                  
+---------- ---------------------------------------- ----------                  
+TEL                                                              MASTER         
+------------------------------------------------------------ ----------         
+    MASUMN                                                                      
+----------                                                                      
+                                                                                
+         3 财务部                                            7                  
+3333333                                                               1         
+                                                                                
+                                                                                
+         4 采购部                                            7                  
+4444444                                                               1         
+
+       DID DNAME                                       MANAGER                  
+---------- ---------------------------------------- ----------                  
+TEL                                                              MASTER         
+------------------------------------------------------------ ----------         
+    MASUMN                                                                      
+----------                                                                      
+                                                                                
+                                                                                
+
+SQL> update dept set tell=null where dname='研发部'
+  2  update dept set tell=null where dname='研发部';
+update dept set tell=null where dname='研发部'
+   *
+第 2 行出现错误: 
+ORA-00933: SQL 命令未正确结束 
+
+
+SQL> update dept set tell=null where dname='研发部';
+update dept set tell=null where dname='研发部'
+                *
+第 1 行出现错误: 
+ORA-00904: "TELL": 标识符无效 
+
+
+SQL> update dept set tel=null where dname='研发部';
+
+已更新0行。
+
+SQL> select tel,nvl('未知') from dept;
+select tel,nvl('未知') from dept
+           *
+第 1 行出现错误: 
+ORA-00909: 参数个数无效 
+
+
+SQL> select * from dept;
+
+       DID DNAME                                       MANAGER                  
+---------- ---------------------------------------- ----------                  
+TEL                                                              MASTER         
+------------------------------------------------------------ ----------         
+    MASUMN                                                                      
+----------                                                                      
+         1 董事会                                            5                  
+1111111                                                               0         
+                                                                                
+                                                                                
+         2 市场部                                            6                  
+222222                                                                1         
+                                                                                
+
+       DID DNAME                                       MANAGER                  
+---------- ---------------------------------------- ----------                  
+TEL                                                              MASTER         
+------------------------------------------------------------ ----------         
+    MASUMN                                                                      
+----------                                                                      
+                                                                                
+         3 财务部                                            7                  
+3333333                                                               1         
+                                                                                
+                                                                                
+         4 采购部                                            7                  
+4444444                                                               1         
+
+       DID DNAME                                       MANAGER                  
+---------- ---------------------------------------- ----------                  
+TEL                                                              MASTER         
+------------------------------------------------------------ ----------         
+    MASUMN                                                                      
+----------                                                                      
+                                                                                
+                                                                                
+
+SQL> insert into dept values(5,'研发部',9,'5555555',1);
+insert into dept values(5,'研发部',9,'5555555',1)
+            *
+第 1 行出现错误: 
+ORA-00947: 没有足够的值 
+
+
+SQL> insert into dept values(20,'研发部',9,'5555555',1);
+insert into dept values(20,'研发部',9,'5555555',1)
+            *
+第 1 行出现错误: 
+ORA-00947: 没有足够的值 
+
+
+SQL> insert into dept values(4,'采购部',8,'4444444',1);
+insert into dept values(4,'采购部',8,'4444444',1)
+            *
+第 1 行出现错误: 
+ORA-00947: 没有足够的值 
+
+
+SQL> insert into dept values(4,'采购部',8,'4444444',1);
+insert into dept values(4,'采购部',8,'4444444',1)
+            *
+第 1 行出现错误: 
+ORA-00947: 没有足够的值 
+
+
+SQL> insert into dept values(4,'采购部',8,'4444444',1);
+insert into dept values(4,'采购部',8,'4444444',1)
+            *
+第 1 行出现错误: 
+ORA-00947: 没有足够的值 
+
+
+SQL> insert into dept values(4,'采购部',8,'4444444',1);
+insert into dept values(4,'采购部',8,'4444444',1)
+            *
+第 1 行出现错误: 
+ORA-00947: 没有足够的值 
+
+
+SQL> insert into dept values(4,'采购部',8,'4444444',1);
+insert into dept values(4,'采购部',8,'4444444',1)
+            *
+第 1 行出现错误: 
+ORA-00947: 没有足够的值 
+
+
+SQL> insert into dept values(4,'采购部',8,'4444444',1);
+insert into dept values(4,'采购部',8,'4444444',1)
+            *
+第 1 行出现错误: 
+ORA-00947: 没有足够的值 
+
+
+SQL> insert into dept values(4,'采购部',8,'4444444',1);
+insert into dept values(4,'采购部',8,'4444444',1)
+            *
+第 1 行出现错误: 
+ORA-00947: 没有足够的值 
+
+
+SQL> insert into dept values(4,'采购部',8,'4444444',1);
+insert into dept values(4,'采购部',8,'4444444',1)
+            *
+第 1 行出现错误: 
+ORA-00947: 没有足够的值 
+
+
+SQL> insert into dept values(4,'采购部',8,'4444444',1);
+insert into dept values(4,'采购部',8,'4444444',1)
+            *
+第 1 行出现错误: 
+ORA-00947: 没有足够的值 
+
+
+SQL> insert into dept values(4,'采购部',8,'4444444',1);
+insert into dept values(4,'采购部',8,'4444444',1)
+            *
+第 1 行出现错误: 
+ORA-00947: 没有足够的值 
+
+
+SQL> insert into dept values(4,'采购部',8,'4444444',1);
+insert into dept values(4,'采购部',8,'4444444',1)
+            *
+第 1 行出现错误: 
+ORA-00947: 没有足够的值 
+
+
+SQL> insert into dept values(4,'采购部',8,'4444444',1);
+insert into dept values(4,'采购部',8,'4444444',1)
+            *
+第 1 行出现错误: 
+ORA-00947: 没有足够的值 
+
+
+SQL> insert into dept values(4,'采购部',8,'4444444',1);
+insert into dept values(4,'采购部',8,'4444444',1)
+            *
+第 1 行出现错误: 
+ORA-00947: 没有足够的值 
+
+
+SQL> insert into dept values(4,'采购部',8,'4444444',1);
+insert into dept values(4,'采购部',8,'4444444',1)
+            *
+第 1 行出现错误: 
+ORA-00947: 没有足够的值 
+
+
+SQL> insert into dept values(5,'管理部',9,'6666666',1);
+insert into dept values(5,'管理部',9,'6666666',1)
+            *
+第 1 行出现错误: 
+ORA-00947: 没有足够的值 
+
+
+SQL> select * from emp
+  2  
+SQL> select * from emp;
+
+       EID ENAME                                    SEX  HIRE                   
+---------- ---------------------------------------- ---- --------------         
+       SAR        DID                                                           
+---------- ----------                                                           
+         5 Tom                                      m    25-7月 -17             
+    4500.5          1                                                           
+                                                                                
+         6 Jacky                                    m    19-9月 -16             
+   2982.12          2                                                           
+                                                                                
+         7 Kelly                                    f    24-10月-17             
+   3491.32          3                                                           
+                                                                                
+
+       EID ENAME                                    SEX  HIRE                   
+---------- ---------------------------------------- ---- --------------         
+       SAR        DID                                                           
+---------- ----------                                                           
+         8 Red                                      f    26-12月-16             
+      3700          4                                                           
+                                                                                
+         9 Blue                                     m    17-1月 -17             
+      3800          2                                                           
+                                                                                
+        10 Grame                                    m    27-1月 -17             
+      5100          3                                                           
+                                                                                
+
+       EID ENAME                                    SEX  HIRE                   
+---------- ---------------------------------------- ---- --------------         
+       SAR        DID                                                           
+---------- ----------                                                           
+         1 Feear                                    m    18-7月 -17             
+      6700          4                                                           
+                                                                                
+
+已选择7行。
+
+SQL> insert into emp values(12,'lucy',null,sysdate-554,6800.00,4);
+
+已创建 1 行。
+
+SQL> select *,nvl(sex,'X') from daul;
+select *,nvl(sex,'X') from daul
+        *
+第 1 行出现错误: 
+ORA-00923: 未找到要求的 FROM 关键字 
+
+
+SQL> select *,nvl(sex,'X') from daul;
+select *,nvl(sex,'X') from daul
+        *
+第 1 行出现错误: 
+ORA-00923: 未找到要求的 FROM 关键字 
+
+
+SQL> select *,nvl(sex,'X') from emp;
+select *,nvl(sex,'X') from emp
+        *
+第 1 行出现错误: 
+ORA-00923: 未找到要求的 FROM 关键字 
+
+
+SQL> select *,nvl(sex,'X') form emp;
+select *,nvl(sex,'X') form emp
+        *
+第 1 行出现错误: 
+ORA-00923: 未找到要求的 FROM 关键字 
+
+
+SQL> select *,nvl(sex,'X') from emp;
+select *,nvl(sex,'X') from emp
+        *
+第 1 行出现错误: 
+ORA-00923: 未找到要求的 FROM 关键字 
+
+
+SQL> select ename,sex,nvl(sex,'W') from emp;
+
+ENAME                                    SEX  NVL(                              
+---------------------------------------- ---- ----                              
+Tom                                      m    m                                 
+Jacky                                    m    m                                 
+Kelly                                    f    f                                 
+Red                                      f    f                                 
+Blue                                     m    m                                 
+Grame                                    m    m                                 
+Feear                                    m    m                                 
+lucy                                          W                                 
+
+已选择8行。
+
+SQL> select * case sex when 'm' then '男' when 'f' then '女' else sex end from emp;
+select * case sex when 'm' then '男' when 'f' then '女' else sex end from emp
+         *
+第 1 行出现错误: 
+ORA-00923: 未找到要求的 FROM 关键字 
+
+
+SQL> select * case, sex when 'm' then '男' when 'f' then '女' else sex end from emp;
+select * case, sex when 'm' then '男' when 'f' then '女' else sex end from emp
+         *
+第 1 行出现错误: 
+ORA-00923: 未找到要求的 FROM 关键字 
+
+
+SQL> select eid,ename, case, sex when 'm' then '男' when 'f' then '女' else sex end from emp;
+select eid,ename, case, sex when 'm' then '男' when 'f' then '女' else sex end from emp
+                                 *
+第 1 行出现错误: 
+ORA-00923: 未找到要求的 FROM 关键字 
+
+
+SQL> select eid,ename,case sex when 'm' then '男' when 'f' then '女' else sex end from emp;
+
+       EID ENAME                                    CASESE                      
+---------- ---------------------------------------- ------                      
+         5 Tom                                      男                          
+         6 Jacky                                    男                          
+         7 Kelly                                    女                          
+         8 Red                                      女                          
+         9 Blue                                     男                          
+        10 Grame                                    男                          
+         1 Feear                                    男                          
+        12 lucy                                                                 
+
+已选择8行。
+
+SQL> spool off
